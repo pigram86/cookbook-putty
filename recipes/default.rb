@@ -19,15 +19,15 @@
 
 # install putty
 windows_package "PuTTY version 0.63" do
-  source node[:putty][:url]
+  source node['putty']['url']
   installer_type :inno
   action :install
-  not_if {::File.exists?(node[:putty][:file])}
+  not_if {::File.exists?(node['putty']['file'])}
   not_if{reboot_pending?}
 end
 
 
-
+# if reboot is needed
 windows_reboot 60 do
   reason 'reboot needed'
   only_if {reboot_pending?}

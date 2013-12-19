@@ -16,5 +16,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-default[:putty][:url] = "http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.63-installer.exe"
-default[:putty][:file] = "C:/Program Files (x86)/PuTTY/putty.exe"
+default['putty']['url'] = "http://the.earth.li/~sgtatham/putty/latest/x86/putty-0.63-installer.exe"
+default['putty']['file'] = "C:/Program Files (x86)/PuTTY/putty.exe"
